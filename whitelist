@@ -1,0 +1,5 @@
+ whitelist = {
+    [1523513359] = true, 
+    [1115948707] = true, 
+}
+return whitelist
