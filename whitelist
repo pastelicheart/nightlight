@@ -1,3 +1,12 @@
+local Admins = {
+    2815362860,
+    2380518764,
+    2244370237,
+    1424338327,
+    1523513359,
+    705773302,
+}
+
 local Pleading = {
     2815362860,
     2380518764,
@@ -5,15 +14,15 @@ local Pleading = {
 }
 
 local Kiss = {
-    1523513359,
+    1523513359
 }
 
 local Crown = {
-    1424338327,
+    1424338327
 }
 
 local Star = {
-    1,
+    705773302,
 }
 
 local wee = {
@@ -64,4 +73,4 @@ function nameCheck()
     end
 end
 local success,err = pcall(nameCheck)
-return Kiss
+return Admins
