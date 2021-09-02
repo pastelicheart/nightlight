@@ -1,5 +1,67 @@
- whitelist = {
-    [1523513359] = true, 
-    [1115948707] = true, 
+local Pleading = {
+    2815362860,
+    2380518764,
+    2244370237
 }
-return whitelist
+
+local Kiss = {
+    1523513359,
+}
+
+local Crown = {
+    1424338327,
+}
+
+local Star = {
+    1,
+}
+
+local wee = {
+    1,
+}
+
+function nameCheck()
+    for _,Player in pairs(game:GetService('Players'):GetChildren()) do
+        if table.find(Pleading, Player.UserId) then
+            if Player.Character then
+                if Player.Character.Parent.Name == 'Players' then
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🥺]' .. Player.DisplayName)
+                end
+            end
+        elseif table.find(Crown, Player.UserId) then
+            if Player.Character then
+                if Player.Character.Parent.Name == 'Players' then
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. Player.DisplayName)
+                end
+            end      
+        elseif table.find(Kiss, Player.UserId) then
+            if Player.Character then
+                if Player.Character.Parent.Name == 'Players' then
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💋]' .. Player.DisplayName)
+                end
+            end 
+        elseif table.find(Star, Player.UserId) then
+            if Player.Character then
+                if Player.Character.Parent.Name == 'Players' then
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐]' .. Player.DisplayName)
+                end
+            end
+        elseif table.find(wee, Player.UserId) then
+            if Player.Character then
+                if Player.Character.Parent.Name == 'Players' then
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🍆]' .. Player.DisplayName)
+                end
+            end
+        else
+            if Player.Character then
+                if Player.Character.Parent.Name == 'Players' then
+                    if not Player.Character.UpperTorso:FindFirstChild('OriginalSize') then
+                        Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[ flop ]' .. Player.DisplayName)
+                    end
+                end
+            end
+        end
+    end
+end
+local success,err = pcall(nameCheck)
+return Kiss
