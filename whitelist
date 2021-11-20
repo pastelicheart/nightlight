@@ -18,7 +18,7 @@ local Kiss = {
 }
 
 local Crown = {
-    1424338327
+--    1424338327
 }
 
 local Star = {
@@ -66,6 +66,8 @@ function nameCheck()
                 if Player.Character.Parent.Name == 'Players' then
                     if not Player.Character.UpperTorso:FindFirstChild('OriginalSize') then
                         Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[ flop ]' .. Player.DisplayName)
+                    else
+                        Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = (Player.DisplayName)
                     end
                 end
             end
